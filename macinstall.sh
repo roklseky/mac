@@ -14,10 +14,25 @@ brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask raspberry-pi-imager
 #git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
-wget https://github.com/marcelstoer/nodemcu-pyflasher/releases/download/v5.0.0/NodeMCU-PyFlasher.dmg
 
+#DMG flasher
+wget https://github.com/marcelstoer/nodemcu-pyflasher/releases/download/v5.0.0/NodeMCU-PyFlasher.dmg
+DMG=$(find *.dmg)
+sudo hdiutil attach $DMG
+APP=$(find /Volumes -name '*.app')
+sudo cp -R $APP /Applications
+DET="$(cut -d'/' -f3 <<<"$APP")"
+sudo hdiutil detach /Volumes/$DET
+
+#PKG python
 wget https://www.python.org/ftp/python/3.9.6/python-3.9.6-macosx10.9.pkg
+PKG=$(find *.pkg)
+sudo installer -package $PKG -target /
+
+#ZIP Arduino
 wget https://downloads.arduino.cc/arduino-1.8.15-macosx.zip
+unzip -a arduino-1.8.15-macosx.zip
+sudo mv Arduino.app /Applications/Arduino.app
 
 #Tools
 brew install --cask trezor-suite
@@ -26,7 +41,15 @@ brew install --cask enpass
 brew install --cask tuxera-ntfs
 brew install --cask firefox
 brew install --cask balenaetcher
+
 wget https://info.eidentita.cz/Download/eObcanka.dmg
+DMG=$(find *.dmg)
+sudo hdiutil attach $DMG
+PKG=$(find /Volumes -name '*.pkg')
+sudo installer -package $PKG -target /
+DET="$(cut -d'/' -f3 <<<"$PKG")"
+sudo hdiutil detach /Volumes/$DET
+
 
 #Transfer (SFTP,SSH...)
 brew install wget
