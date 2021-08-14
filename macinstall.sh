@@ -24,6 +24,11 @@ sudo cp -R $APP /Applications
 DET="$(cut -d'/' -f3 <<<"$APP")"
 sudo hdiutil detach /Volumes/$DET
 
+#TAR ESP Flasher
+wget https://github.com/Jason2866/ESP_Flasher/releases/download/v.1.3/macOS.zip
+unzip -a macOS.zip
+tar -xvf dist.tar
+
 #PKG python
 wget https://www.python.org/ftp/python/3.9.6/python-3.9.6-macosx10.9.pkg
 PKG=$(find *.pkg)
