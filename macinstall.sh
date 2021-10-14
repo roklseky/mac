@@ -70,7 +70,7 @@ brew install duck
 brew install --cask cyberduck
 brew install --cask teamviewer
 #brew install --cask transfer
-brew install termius
+brew install --cask termius
 
 #Media
 brew install --cask kodi
