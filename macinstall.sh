@@ -76,14 +76,7 @@ brew install --cask airflow
 #Translate
 brew install --cask deepl
 
+#Filezilla
 wget https://dl2.cdn.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2?h=Yl5oCqnblpnu2AlICfgTOA&x=1628694714
-
-#install DMG
-sudo hdiutil attach <image>.dmg
-#pkg
-sudo installer -package /Volumes/<image>/<image>.pkg -target /
-#app
-sudo cp -R /Volumes/Etcher\ 1.2.1/Etcher.app /Applications
-sudo hdiutil detach /Volumes/<image>
 
 
