@@ -38,10 +38,11 @@ rm ESP-Flasher_macOS.zip
 #tar -xvf dist.tar
 
 #ZIP Arduino
-wget https://downloads.arduino.cc/arduino-1.8.15-macosx.zip
-unzip -a arduino-1.8.15-macosx.zip
+LAST=$(curl https://arduino-cli.github.io/arduino-version/list | grep -oE "[^,]+$")
+wget https://downloads.arduino.cc/arduino-$LAST-macosx.zip
+unzip -a arduino-$LAST-macosx.zip
 sudo mv Arduino.app /Applications/Arduino.app
-rm arduino-1.8.15-macosx.zip
+rm arduino-$LAST-macosx.zip
 
 #Tools
 brew install --cask trezor-suite
