@@ -80,6 +80,7 @@ brew install --cask airflow
 brew install --cask deepl
 
 #Filezilla
-wget https://dl2.cdn.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2?h=Yl5oCqnblpnu2AlICfgTOA&x=1628694714
-
+wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
+tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
+sudo mv FileZilla.app /Applications/FileZilla.app
 
