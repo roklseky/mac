@@ -8,6 +8,12 @@
 brew tap homebrew/cask
 brew install wget
 
+#PKG python
+wget https://www.python.org/ftp/python/3.9.6/python-3.9.6-macosx10.9.pkg
+PKG=$(find *.pkg)
+sudo installer -package $PKG -target /
+rm $PKG
+
 #Dev
 brew install docker
 brew install --cask visual-studio-code
@@ -26,19 +32,16 @@ sudo hdiutil detach /Volumes/$DET
 rm $DMG
 
 #TAR ESP Flasher
-wget https://github.com/Jason2866/ESP_Flasher/releases/download/v.1.3/macOS.zip
-unzip -a macOS.zip
-tar -xvf dist.tar
-
-#PKG python
-wget https://www.python.org/ftp/python/3.9.6/python-3.9.6-macosx10.9.pkg
-PKG=$(find *.pkg)
-sudo installer -package $PKG -target /
+wget https://github.com/Jason2866/ESP_Flasher/releases/download/v.1.3/ESP-Flasher_macOS.zip
+unzip -a ESP-Flasher_macOS.zip
+rm ESP-Flasher_macOS.zip
+#tar -xvf dist.tar
 
 #ZIP Arduino
 wget https://downloads.arduino.cc/arduino-1.8.15-macosx.zip
 unzip -a arduino-1.8.15-macosx.zip
 sudo mv Arduino.app /Applications/Arduino.app
+rm arduino-1.8.15-macosx.zip
 
 #Tools
 brew install --cask trezor-suite
