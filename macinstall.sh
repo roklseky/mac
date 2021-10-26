@@ -22,7 +22,9 @@ brew install --cask raspberry-pi-imager
 #git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
 
 #DMG flasher
-wget https://github.com/marcelstoer/nodemcu-pyflasher/releases/download/v5.0.0/NodeMCU-PyFlasher.dmg
+GITHUB_URL=https://github.com/marcelstoer/nodemcu-pyflasher/releases
+VERSION_PY_FLASHER=$(curl -w '%{url_effective}' -I -L -s -S ${GITHUB_URL}/latest -o /dev/null | sed -e 's|.*/||')
+wget https://github.com/marcelstoer/nodemcu-pyflasher/releases/download/${VERSION_PY_FLASHER}/NodeMCU-PyFlasher.dmg
 DMG=$(find *.dmg)
 sudo hdiutil attach $DMG
 APP=$(find /Volumes -name '*.app')
