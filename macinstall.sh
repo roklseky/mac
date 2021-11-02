@@ -7,9 +7,10 @@
 
 brew tap homebrew/cask
 brew install wget
+brew install --cask xcodes
 
 #PKG python
-wget https://www.python.org/ftp/python/3.9.6/python-3.9.6-macosx10.9.pkg
+wget https://www.python.org/ftp/python/3.10.0/python-3.10.0-macos11.pkg
 PKG=$(find *.pkg)
 sudo installer -package $PKG -target /
 rm $PKG
