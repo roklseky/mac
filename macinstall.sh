@@ -97,7 +97,7 @@ tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
 sudo mv FileZilla.app /Applications/FileZilla.app
 rm FileZilla_3.55.1_macosx-x86.app.tar.bz2
 
-#Sign-in to appstore 
+#Sign-in to appstore https://github.com/mas-cli/mas
 echo "$(tput setaf 1)$(tput setab 7) \
 Type your appleID: \
 $(tput sgr 0)"
