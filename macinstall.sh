@@ -60,6 +60,7 @@ brew install --cask enpass
 brew install --cask tuxera-ntfs
 brew install --cask firefox
 brew install --cask balenaetcher
+brew install --cask hush
 
 wget https://info.eidentita.cz/Download/eObcanka.dmg
 DMG=$(find *.dmg)
