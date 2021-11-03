@@ -7,6 +7,7 @@
 
 brew tap homebrew/cask
 brew install wget
+brew install mas
 brew install --cask xcodes
 
 #PKG python
