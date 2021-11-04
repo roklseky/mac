@@ -62,6 +62,7 @@ brew install --cask tuxera-ntfs
 brew install --cask firefox
 brew install --cask balenaetcher
 brew install --cask hush
+brew install --cask drawio
 
 wget https://info.eidentita.cz/Download/eObcanka.dmg
 DMG=$(find *.dmg)
