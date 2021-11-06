@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #https://formulae.brew.sh/cask/
 #chmod a+x macinstall.sh
 
