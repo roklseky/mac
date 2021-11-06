@@ -113,3 +113,7 @@ mas install 409203825
 
 #install cryptowatch via mas
 mas install 1527457231
+
+echo "$(tput setaf 1)$(tput setab 7) \
+Done! \
+$(tput sgr 0)"
