@@ -17,7 +17,7 @@ sudo installer -package $PKG -target /
 rm $PKG
 
 #PKG anaconda https://repo.anaconda.com/archive/
-wdet https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg
+wget https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg
 PKG=$(find *.pkg)
 sudo installer -package $PKG -target /
 rm $PKG
