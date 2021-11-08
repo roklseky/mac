@@ -92,6 +92,22 @@ brew install --cask airflow
 #Translate
 brew install --cask deepl
 
+brew install dockutil
+dockutil --remove 'Contacts'
+dockutil --remove 'Maps'
+dockutil --remove 'FaceTime'
+dockutil --remove 'Reminders'
+dockutil --remove 'TV'
+dockutil --remove 'Music'
+dockutil --remove 'News'
+dockutil --remove 'Stocks'
+dockutil --remove 'Launchpad'
+dockutil --remove 'Podcasts'
+dockutil --remove 'Siri'
+dockutil --add /Applications/Termius.app
+dockutil --add '/Applications/PyCharm CE.app'
+dockutil --add /Applications/Enpass.app
+
 #Filezilla
 wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
 tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
@@ -117,3 +133,4 @@ mas install 1527457231
 echo "$(tput setaf 1)$(tput setab 7) \
 Done! \
 $(tput sgr 0)"
+
