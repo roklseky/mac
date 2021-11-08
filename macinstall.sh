@@ -23,7 +23,7 @@ sudo installer -package $PKG -target /
 rm $PKG
 
 #Dev
-brew install docker
+brew install --cask docker
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask raspberry-pi-imager
