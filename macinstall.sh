@@ -77,6 +77,7 @@ rm $DMG
 #Transfer (SFTP,SSH...)
 brew install wget
 brew install telnet
+brew install nmap
 brew install --cask tunnelblick
 brew install duck
 brew install --cask cyberduck
