@@ -63,6 +63,8 @@ brew install --cask firefox
 brew install --cask balenaetcher
 brew install --cask hush
 brew install --cask drawio
+brew install azure-cli
+brew install awscli
 
 wget https://info.eidentita.cz/Download/eObcanka.dmg
 DMG=$(find *.dmg)
