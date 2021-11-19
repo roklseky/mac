@@ -26,6 +26,7 @@ rm $PKG
 # brew install --cask docker
 brew install --cask rancher
 alias docker=nerdctl
+brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
