@@ -28,6 +28,7 @@ brew install --cask rancher
 alias docker=nerdctl
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
+brew install --cask iterm2
 brew install --cask raspberry-pi-imager
 # git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
 
