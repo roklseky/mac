@@ -22,13 +22,14 @@ PKG=$(find *.pkg)
 sudo installer -package $PKG -target /
 rm $PKG
 
-#Dev
-brew install --cask docker
+# Dev
+# brew install --cask docker
 brew install --cask rancher
+alias docker=nerdctl
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask raspberry-pi-imager
-#git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
+# git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
 
 #DMG flasher
 GITHUB_URL=https://github.com/marcelstoer/nodemcu-pyflasher/releases
