@@ -24,6 +24,7 @@ rm $PKG
 
 #Dev
 brew install --cask docker
+brew install --cask rancher
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask raspberry-pi-imager
