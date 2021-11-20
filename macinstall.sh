@@ -31,6 +31,8 @@ brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
 brew install --cask raspberry-pi-imager
+brew install ruby
+gem install --user-install bundler jekyll
 # git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
 
 #DMG flasher
