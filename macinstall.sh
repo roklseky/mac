@@ -198,7 +198,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
+sudo systemsetup -settimezone "Europe/Prague" > /dev/null
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
