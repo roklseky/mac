@@ -41,7 +41,6 @@ brew install ruby
 export SDKROOT=$(xcrun --show-sdk-path)
 echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
 echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
-gem install bundler jekyll
 echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
 echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
 
@@ -53,9 +52,9 @@ wget https://github.com/marcelstoer/nodemcu-pyflasher/releases/download/${VERSIO
 DMG=$(find *.dmg)
 sudo hdiutil attach $DMG
 APP=$(find /Volumes -name '*.app')
-sudo cp -R $APP /Applications
+sudo cp -R "$APP" /Applications
 DET="$(cut -d'/' -f3 <<<"$APP")"
-sudo hdiutil detach /Volumes/$DET
+sudo hdiutil detach "/Volumes/$DET"
 rm $DMG
 
 # TAR ESP Flasher
@@ -82,16 +81,6 @@ brew install --cask hush
 brew install --cask drawio
 brew install azure-cli
 brew install awscli
-
-wget https://info.eidentita.cz/Download/eObcanka.dmg
-DMG=$(find *.dmg)
-sudo hdiutil attach $DMG
-PKG=$(find /Volumes -name '*.pkg')
-sudo installer -package $PKG -target /
-DET="$(cut -d'/' -f3 <<<"$PKG")"
-sudo hdiutil detach /Volumes/$DET
-rm $DMG
-
 
 # Transfer (SFTP,SSH...)
 brew install wget
@@ -144,6 +133,8 @@ dockutil --add /Applications/Anaconda-Navigator.app
 dockutil --add '/Applications/Rancher Desktop.app'
 dockutil --add /Applications/VirtualBox.app
 dockutil --add /Applications/Enpass.app
+
+gem install bundler jekyll
 
 echo "$(tput setaf 1)$(tput setab 7) \
 Type your hostname (rmbp): \
@@ -259,6 +250,15 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+wget https://info.eidentita.cz/Download/eObcanka.dmg
+DMG=$(find *.dmg)
+sudo hdiutil attach $DMG
+PKG=$(find /Volumes -name '*.pkg')
+sudo installer -package $PKG -target /
+DET="$(cut -d'/' -f3 <<<"$PKG")"
+sudo hdiutil detach /Volumes/$DET
+rm $DMG
 
 echo "$(tput setaf 1)$(tput setab 7) \
 Done! Pease reboot system. \
