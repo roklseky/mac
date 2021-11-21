@@ -1,5 +1,6 @@
 #!/bin/bash
 # https://formulae.brew.sh/cask/
+# https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # chmod a+x macinstall.sh
 
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
