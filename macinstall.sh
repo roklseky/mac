@@ -20,6 +20,7 @@ rm $PKG
 # brew install --cask docker
 brew install --cask rancher
 echo 'alias docker=nerdctl' | sudo tee -a ~/.zshrc
+echo 'alias docker=nerdctl' | sudo tee -a ~/.bash_profile
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
@@ -28,8 +29,10 @@ brew install --cask virtualbox
 brew install ruby
 export SDKROOT=$(xcrun --show-sdk-path)
 echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
+echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
 gem install bundler jekyll
 echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
+echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
 
 # DMG flasher
 # git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
