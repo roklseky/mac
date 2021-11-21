@@ -149,6 +149,7 @@ $(tput sgr 0)"
 
 # mas signin doesn't work, therefore:
 open -a "App Store"
+read
 
 # read appleID
 # mas signin $appleID
