@@ -116,9 +116,9 @@ dockutil --remove 'Siri'
 dockutil --add /Applications/Termius.app
 dockutil --add /Applications/iTerm.app
 dockutil --add '/Applications/PyCharm CE.app'
-dockutil --add 'Visual Studio Code.app'
-dockutil --add Anaconda-Navigator.app
-dockutil --add Rancher Desktop.app
+dockutil --add '/Applications/Visual Studio Code.app'
+dockutil --add /Applications/Anaconda-Navigator.app
+dockutil --add /Applications/Rancher Desktop.app
 dockutil --add /Applications/Enpass.app
 
 # Filezilla
