@@ -140,6 +140,14 @@ mas install 409203825
 mas install 1527457231
 
 echo "$(tput setaf 1)$(tput setab 7) \
-Done! \
+Type your hostname (rmbp): \
+$(tput sgr 0)"
+read compname
+sudo scutil --set ComputerName $compname
+sudo scutil --set LocalHostName $compname
+sudo scutil --set HostName $compname
+
+echo "$(tput setaf 1)$(tput setab 7) \
+Done! Pease reboot system. \
 $(tput sgr 0)"
 
