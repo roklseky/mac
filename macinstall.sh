@@ -19,19 +19,20 @@ rm $PKG
 # Dev
 # brew install --cask docker
 brew install --cask rancher
-alias docker=nerdctl
+echo 'alias docker=nerdctl' | sudo tee -a ~/.zshrc
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
 brew install --cask raspberry-pi-imager
+brew install --cask virtualbox
 brew install ruby
 export SDKROOT=$(xcrun --show-sdk-path)
-echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
 gem install bundler jekyll
-# git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
-brew install --cask virtualbox
+echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
 
 # DMG flasher
+# git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
 GITHUB_URL=https://github.com/marcelstoer/nodemcu-pyflasher/releases
 VERSION_PY_FLASHER=$(curl -w '%{url_effective}' -I -L -s -S ${GITHUB_URL}/latest -o /dev/null | sed -e 's|.*/||')
 wget https://github.com/marcelstoer/nodemcu-pyflasher/releases/download/${VERSION_PY_FLASHER}/NodeMCU-PyFlasher.dmg
@@ -126,7 +127,8 @@ dockutil --add /Applications/iTerm.app
 dockutil --add '/Applications/PyCharm CE.app'
 dockutil --add '/Applications/Visual Studio Code.app'
 dockutil --add /Applications/Anaconda-Navigator.app
-dockutil --add /Applications/Rancher Desktop.app
+dockutil --add '/Applications/Rancher Desktop.app'
+dockutil --add /Applications/VirtualBox.app
 dockutil --add /Applications/Enpass.app
 
 echo "$(tput setaf 1)$(tput setab 7) \
