@@ -135,6 +135,7 @@ dockutil --add /Applications/VirtualBox.app
 dockutil --add /Applications/Enpass.app
 
 gem install bundler jekyll
+bundle add webrick
 
 echo "$(tput setaf 1)$(tput setab 7) \
 Type your hostname (rmbp): \
