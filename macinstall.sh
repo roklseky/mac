@@ -16,24 +16,20 @@ PKG=$(find *.pkg)
 sudo installer -package $PKG -target /
 rm $PKG
 
-# PKG anaconda https://repo.anaconda.com/archive/
-wget https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg
-PKG=$(find *.pkg)
-sudo installer -package $PKG -target /
-rm $PKG
-
 # Dev
 # brew install --cask docker
 brew install --cask rancher
 alias docker=nerdctl
-brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
 brew install --cask raspberry-pi-imager
 brew install ruby
+export SDKROOT=$(xcrun --show-sdk-path)
+echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc
 gem install bundler jekyll
 # git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
+brew install --cask virtualbox
 
 # DMG flasher
 GITHUB_URL=https://github.com/marcelstoer/nodemcu-pyflasher/releases
@@ -101,6 +97,18 @@ brew install --cask airflow
 # Translate
 brew install --cask deepl
 
+# PKG anaconda https://repo.anaconda.com/archive/
+wget https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg
+PKG=$(find *.pkg)
+sudo installer -package $PKG -target /
+rm $PKG
+
+# Filezilla
+wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
+tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
+sudo mv FileZilla.app /Applications/FileZilla.app
+rm FileZilla_3.55.1_macosx-x86.app.tar.bz2
+
 brew install dockutil
 dockutil --remove 'Contacts'
 dockutil --remove 'Maps'
@@ -121,28 +129,6 @@ dockutil --add /Applications/Anaconda-Navigator.app
 dockutil --add /Applications/Rancher Desktop.app
 dockutil --add /Applications/Enpass.app
 
-# Filezilla
-wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
-tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
-sudo mv FileZilla.app /Applications/FileZilla.app
-rm FileZilla_3.55.1_macosx-x86.app.tar.bz2
-
-# Sign-in to appstore https://github.com/mas-cli/mas
-echo "$(tput setaf 1)$(tput setab 7) \
-Type your appleID: \
-$(tput sgr 0)"
-
-read appleID
-mas signin $appleID
-
-# Graphical sign in "mas signin --dialog mas@example.com"
-
-# install numbers via mas
-mas install 409203825
-
-# install cryptowatch via mas
-mas install 1527457231
-
 echo "$(tput setaf 1)$(tput setab 7) \
 Type your hostname (rmbp): \
 $(tput sgr 0)"
@@ -150,6 +136,24 @@ read compname
 sudo scutil --set ComputerName $compname
 sudo scutil --set LocalHostName $compname
 sudo scutil --set HostName $compname
+
+# Sign-in to appstore https://github.com/mas-cli/mas
+echo "$(tput setaf 1)$(tput setab 7) \
+Login to app store. Press Enter when done: \
+$(tput sgr 0)"
+
+# mas signin doesn't work, therefore:
+open -a "App Store"
+
+# read appleID
+# mas signin $appleID
+# Graphical sign in "mas signin --dialog mas@example.com"
+
+# install numbers via mas
+mas install 409203825
+
+# install cryptowatch via mas
+mas install 1527457231
 
 echo "$(tput setaf 1)$(tput setab 7) \
 Done! Pease reboot system. \
