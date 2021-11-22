@@ -44,6 +44,14 @@ echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$P
 echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
 echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
 
+# Make folders collored
+echo 'export CLICOLOR=1' | sudo tee -a ~/.zshrc
+echo 'export LSCOLORS=ExFxBxDxCxegedabagacad' | sudo tee -a ~/.zshrc
+echo 'alias ls='ls -GFh'' | sudo tee -a ~/.zshrc
+echo 'export CLICOLOR=1' | sudo tee -a ~/.bash_profile
+echo 'export LSCOLORS=ExFxBxDxCxegedabagacad' | sudo tee -a ~/.bash_profile
+echo 'alias ls='ls -GFh'' | sudo tee -a ~/.bash_profile
+
 # DMG flasher
 # git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
 GITHUB_URL=https://github.com/marcelstoer/nodemcu-pyflasher/releases
