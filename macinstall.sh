@@ -87,6 +87,9 @@ brew install --cask firefox
 brew install --cask balenaetcher
 brew install --cask hush
 brew install --cask drawio
+brew install --cask cheatsheet
+brew install --cask alfred
+brew install --cask mathpix-snipping-tool
 brew install azure-cli
 brew install awscli
 
