@@ -99,6 +99,7 @@ brew install wget
 brew install telnet
 brew install nmap
 brew install tree
+brew install hudochenkov/sshpass/sshpass
 brew install --cask tunnelblick
 brew install duck
 brew install --cask cyberduck
