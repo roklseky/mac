@@ -122,10 +122,10 @@ sudo installer -package $PKG -target /
 rm $PKG
 
 # Filezilla
-wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
-tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
-sudo mv FileZilla.app /Applications/FileZilla.app
-rm FileZilla_3.55.1_macosx-x86.app.tar.bz2
+#wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
+#tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
+#sudo mv FileZilla.app /Applications/FileZilla.app
+#rm FileZilla_3.55.1_macosx-x86.app.tar.bz2
 
 brew install dockutil
 dockutil --remove 'Contacts'
