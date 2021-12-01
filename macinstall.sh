@@ -93,6 +93,7 @@ brew install --cask alfred
 brew install --cask mathpix-snipping-tool
 brew install azure-cli
 brew install awscli
+brew install google-cloud-sdk
 
 # Transfer (SFTP,SSH...)
 brew install wget
