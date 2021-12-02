@@ -91,6 +91,7 @@ brew install --cask drawio
 brew install --cask cheatsheet
 brew install --cask alfred
 brew install --cask mathpix-snipping-tool
+brew install --cask sublime-text
 brew install azure-cli
 brew install awscli
 brew install --cask google-cloud-sdk
