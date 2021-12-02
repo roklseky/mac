@@ -154,6 +154,7 @@ dockutil --add /Applications/Anaconda-Navigator.app
 dockutil --add '/Applications/Rancher Desktop.app'
 dockutil --add /Applications/VirtualBox.app
 dockutil --add /Applications/Enpass.app
+dockutil --add '/Applications/Sublime Text.app'
 
 gem install bundler jekyll
 bundle add webrick
