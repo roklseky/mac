@@ -45,7 +45,7 @@ echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$P
 echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
 echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
 
-# Make folders collored
+# Make folders collored in shell
 echo 'export CLICOLOR=1' | sudo tee -a ~/.zshrc
 echo 'export LSCOLORS=ExFxBxDxCxegedabagacad' | sudo tee -a ~/.zshrc
 echo 'alias ls='ls -GFh'' | sudo tee -a ~/.zshrc
@@ -94,11 +94,10 @@ brew install --cask mathpix-snipping-tool
 brew install --cask sublime-text
 brew install azure-cli
 brew install awscli
-brew install --cask google-cloud-sdk
+# brew install --cask google-cloud-sdk
 # https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.1-darwin-x86_64.tar.gz
-
-echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' | sudo tee -a ~/.zshrc
-echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"' | sudo tee -a ~/.bash_profile
+# echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' | sudo tee -a ~/.zshrc
+# echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"' | sudo tee -a ~/.bash_profile
 
 # Transfer (SFTP,SSH...)
 brew install wget
@@ -155,6 +154,7 @@ dockutil --add '/Applications/Rancher Desktop.app'
 dockutil --add /Applications/VirtualBox.app
 dockutil --add /Applications/Enpass.app
 dockutil --add '/Applications/Sublime Text.app'
+dockutil --add '/Applications/Cyberduck.app'
 
 gem install bundler jekyll
 bundle add webrick
