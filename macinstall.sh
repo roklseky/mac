@@ -29,10 +29,10 @@ rm $PKG
 
 # Dev
 # brew install --cask docker
-brew install --cask rancher
+# brew install --cask rancher
 # brew install helm
-echo 'alias docker=nerdctl' | sudo tee -a ~/.zshrc
-echo 'alias docker=nerdctl' | sudo tee -a ~/.bash_profile
+# echo 'alias docker=nerdctl' | sudo tee -a ~/.zshrc
+# echo 'alias docker=nerdctl' | sudo tee -a ~/.bash_profile
 brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
