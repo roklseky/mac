@@ -283,6 +283,10 @@ DET="$(cut -d'/' -f3 <<<"$PKG")"
 sudo hdiutil detach /Volumes/$DET
 rm $DMG
 
+while read p; do
+  echo "$p" | sudo tee -a /etc/hosts
+done <Documents/hosts.txt
+
 echo "$(tput setaf 1)$(tput setab 7) \
 Done! Pease reboot system. \
 $(tput sgr 0)"
