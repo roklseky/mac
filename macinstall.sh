@@ -150,7 +150,7 @@ dockutil --add /Applications/iTerm.app
 dockutil --add '/Applications/PyCharm CE.app'
 dockutil --add '/Applications/Visual Studio Code.app'
 dockutil --add /Applications/Anaconda-Navigator.app
-dockutil --add '/Applications/Rancher Desktop.app'
+#dockutil --add '/Applications/Rancher Desktop.app'
 dockutil --add /Applications/VirtualBox.app
 dockutil --add /Applications/Enpass.app
 dockutil --add '/Applications/Sublime Text.app'
@@ -285,7 +285,7 @@ rm $DMG
 
 while read p; do
   echo "$p" | sudo tee -a /etc/hosts
-done <Documents/hosts.txt
+done <~/Documents/hosts.txt
 
 echo "$(tput setaf 1)$(tput setab 7) \
 Done! Pease reboot system. \
