@@ -275,6 +275,8 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+# Hide & Show it fast
+defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock
 
 wget https://info.eidentita.cz/Download/eObcanka.dmg
 DMG=$(find *.dmg)
