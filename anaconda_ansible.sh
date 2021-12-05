@@ -5,5 +5,4 @@ conda create --name ansible-env --clone base
 conda activate ansible-env
 conda env list
 
-conda activate ansible-env
-conda install -c conda-forge ansible
+conda install -c conda-forge ansible -n ansible-env
