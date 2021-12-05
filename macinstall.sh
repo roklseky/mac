@@ -112,6 +112,7 @@ brew install --cask cyberduck
 brew install --cask teamviewer
 #brew install --cask transfer
 brew install --cask termius
+brew install termius
 
 # Media
 brew install --cask kodi
