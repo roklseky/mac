@@ -20,6 +20,8 @@ brew tap homebrew/cask
 brew install wget
 brew install mas
 brew install --cask xcodes
+brew install glances
+brew install cask
 
 # PKG python
 wget https://www.python.org/ftp/python/3.10.0/python-3.10.0-macos11.pkg
