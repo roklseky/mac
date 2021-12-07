@@ -116,6 +116,7 @@ brew install --cask teamviewer
 brew install --cask termius
 brew install termius
 brew link termius
+brew install xclip
 
 # Media
 brew install --cask kodi
