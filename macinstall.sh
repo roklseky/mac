@@ -117,6 +117,7 @@ brew install --cask termius
 brew install termius
 brew link termius
 brew install xclip
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Media
 brew install --cask kodi
