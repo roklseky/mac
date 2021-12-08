@@ -118,6 +118,8 @@ brew install termius
 brew link termius
 brew install xclip
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo 'source ~/.bash_profile' | sudo tee -a ~/.zshrc
+source ~/.zshrc
 
 # Media
 brew install --cask kodi
