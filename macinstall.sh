@@ -117,9 +117,16 @@ brew install --cask termius
 brew install termius
 brew link termius
 brew install xclip
+
+# iTerm tuning
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo 'source ~/.bash_profile' | sudo tee -a ~/.zshrc
 source ~/.zshrc
+cd ~/Library/Fonts
+wget https://github.com/Falkor/dotfiles/blob/master/fonts/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf
+cd
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
 
 # Media
 brew install --cask kodi
