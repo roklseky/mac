@@ -142,6 +142,19 @@ PKG=$(find *.pkg)
 sudo installer -package $PKG -target /
 rm $PKG
 
+# Printer Canon MG2900
+wget https://gdlp01.c-wss.com/gds/0/0100006040/08/mcpd-mac-mg2900-16_40_1_0-ea21_3.dmg
+sudo hdiutil attach mcpd-mac-mg2900-16_40_1_0-ea21_3.dmg
+sudo installer -package "/Volumes/PrinterDriver_MG2900 series/PrinterDriver_MG2900 series_164001.pkg" -target /
+sudo hdiutil detach "/Volumes/PrinterDriver_MG2900 series"
+rm mcpd-mac-mg2900-16_40_1_0-ea21_3.dmg
+
+wget https://gdlp01.c-wss.com/gds/6/0100006586/04/misd-mac-ijscanner14f-4_1_3-ea21_3.dmg
+sudo hdiutil attach misd-mac-ijscanner14f-4_1_3-ea21_3.dmg
+sudo installer -package "/Volumes/Canon IJScanner14f/Canon IJScanner14f_040103.pkg" -target /
+sudo hdiutil detach "/Volumes/Canon IJScanner14f"
+rm misd-mac-ijscanner14f-4_1_3-ea21_3.dmg
+
 # Filezilla
 #wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
 #tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
@@ -181,6 +194,8 @@ read compname
 sudo scutil --set ComputerName $compname
 sudo scutil --set LocalHostName $compname
 sudo scutil --set HostName $compname
+
+
 
 # Sign-in to appstore https://github.com/mas-cli/mas
 echo "$(tput setaf 1)$(tput setab 7) \
