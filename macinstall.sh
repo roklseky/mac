@@ -96,6 +96,7 @@ brew install --cask mathpix-snipping-tool
 brew install --cask sublime-text
 brew install azure-cli
 brew install awscli
+brew install pwgen
 # brew install --cask google-cloud-sdk
 # https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.1-darwin-x86_64.tar.gz
 # echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' | sudo tee -a ~/.zshrc
