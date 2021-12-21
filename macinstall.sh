@@ -94,6 +94,7 @@ brew install --cask cheatsheet
 brew install --cask alfred
 brew install --cask mathpix-snipping-tool
 brew install --cask sublime-text
+brew install --cask onlyoffice
 brew install azure-cli
 brew install awscli
 brew install pwgen
