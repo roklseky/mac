@@ -309,6 +309,7 @@ defaults write com.apple.dock autohide -bool true
 # Hide & Show it fast
 defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock
 
+# Identity tool onstalation (CR)
 wget https://info.eidentita.cz/Download/eObcanka.dmg
 DMG=$(find *.dmg)
 sudo hdiutil attach $DMG
@@ -318,9 +319,16 @@ DET="$(cut -d'/' -f3 <<<"$PKG")"
 sudo hdiutil detach /Volumes/$DET
 rm $DMG
 
+# Name resolution config (home)
 while read p; do
   echo "$p" | sudo tee -a /etc/hosts
 done <~/Documents/hosts.txt
+
+# SSH config
+if sudo cat /etc/ssh/ssh_config | grep "#   StrictHostKeyChecking ask"
+then
+sudo sed -i 's/#   StrictHostKeyChecking ask/StrictHostKeyChecking no/g' /etc/ssh/ssh_config
+sudo sed -i 's|#   IdentityFile ~/.ssh/id_rsa|IdentityFile ~/.ssh/r-mbp|g' /etc/ssh/ssh_config
 
 echo "$(tput setaf 1)$(tput setab 7) \
 Done! Pease reboot system. \
