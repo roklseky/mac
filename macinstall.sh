@@ -327,8 +327,8 @@ done <~/Documents/hosts.txt
 # SSH config
 if sudo cat /etc/ssh/ssh_config | grep "#   StrictHostKeyChecking ask"
 then
-sudo sed -i 's/#   StrictHostKeyChecking ask/StrictHostKeyChecking no/g' /etc/ssh/ssh_config
-sudo sed -i 's|#   IdentityFile ~/.ssh/id_rsa|IdentityFile ~/.ssh/r-mbp|g' /etc/ssh/ssh_config
+sudo sed -i '' 's/#   StrictHostKeyChecking ask/StrictHostKeyChecking no/g' /etc/ssh/ssh_config
+sudo sed -i '' 's|#   IdentityFile ~/.ssh/id_rsa|IdentityFile ~/.ssh/r-mbp|g' /etc/ssh/ssh_config
 fi
 
 echo "$(tput setaf 1)$(tput setab 7) \
