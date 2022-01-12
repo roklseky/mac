@@ -39,7 +39,8 @@ brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
 brew install --cask raspberry-pi-imager
-brew install --cask virtualbox
+brew install qemu
+# brew install --cask virtualbox
 brew install ruby
 export SDKROOT=$(xcrun --show-sdk-path)
 echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
@@ -332,6 +333,6 @@ sudo sed -i '' 's|#   IdentityFile ~/.ssh/id_rsa|IdentityFile ~/.ssh/r-mbp|g' /e
 fi
 
 echo "$(tput setaf 1)$(tput setab 7) \
-Done! Pease reboot system. \
+Done! Please reboot system. \
 $(tput sgr 0)"
 
