@@ -219,6 +219,7 @@ mas install 409203825
 
 # install cryptowatch via mas
 mas install 1527457231
+mas install 1475387142
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
