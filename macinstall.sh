@@ -22,6 +22,7 @@ brew install mas
 brew install --cask xcodes
 brew install glances
 brew install cask
+brew install wakeonlan
 
 # PKG python
 wget https://www.python.org/ftp/python/3.10.0/python-3.10.0-macos11.pkg
